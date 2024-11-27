@@ -1,38 +1,330 @@
-.App {
-  text-align: center;
+/* Estilos generales para el cuerpo de la aplicación */
+body {
+  font-family: Arial, sans-serif; /* Familia de fuentes */
+  background-color: #181820; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  margin: 0; /* Margen exterior */
+  padding: 0; /* Relleno interior */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Contenedor principal */
+.container {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 20px; /* Relleno interior */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos para los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  color: #fff; /* Color del texto */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Grupo de formulario */
+.form-group {
+  margin-bottom: 20px; /* Margen inferior */
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos para los campos de formulario */
+.form-control {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interior */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 1px solid #444; /* Borde */
+  border-radius: 4px; /* Radio de borde */
+  background-color: #22222c; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  transition: border-color 0.3s ease; /* Transición de color de borde */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-control:focus {
+  border-color: #007bff; /* Color de borde al enfocar */
+  outline: none; /* Sin contorno al enfocar */
+}
+
+/* Botones generales */
+.btn {
+  padding: 10px 20px; /* Relleno interior */
+  font-size: 16px; /* Tamaño de fuente */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Radio de borde */
+  cursor: pointer; /* Cursor de puntero */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+/* Botón primario */
+.btn-primary {
+  background-color: #007bff; /* Color de fondo */
+  color: #fff; /* Color del texto */
+}
+
+/* Botón primario al pasar el mouse */
+.btn-primary:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+/* Lista de grupos */
+.list-group {
+  list-style: none; /* Sin estilo de lista */
+  padding: 0; /* Relleno interior */
+}
+
+/* Elemento de lista de grupos */
+.list-group-item {
+  background-color: #22222c; /* Color de fondo */
+  border: 1px solid #444; /* Borde */
+  padding: 15px; /* Relleno interior */
+  margin-bottom: 10px; /* Margen inferior */
+  border-radius: 4px; /* Radio de borde */
+  color: #fff; /* Color del texto */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.list-group-item:hover {
+  background-color: #22222c; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+.navbar {
+  margin-bottom: 20px; /* Margen inferior */
+  background-color: #22222c; /* Color de fondo */
+  padding: 10px 20px; /* Relleno interior */
+}
+
+/* Marca de navegación y enlaces de navegación */
+.navbar-brand, .nav-link {
+  color: #fff !important; /* Color del texto */
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #007bff !important; /* Color del texto al pasar el mouse */
+}
+
+/* Tarjeta de la publicación */
+.publicacion-card {
+  background-color: #22222c; /* Color de fondo */
+  border: 1px solid #444; /* Borde */
+  border-radius: 8px; /* Radio de borde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: box-shadow 0.3s ease; /* Transición de sombra */
+  display: flex; /* Display flex */
+  flex-direction: column; /* Dirección de columna */
+  height: 500px; /* Altura */
+}
+
+.publicacion-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+/* Encabezado de la tarjeta de la publicación */
+.publicacion-card-header {
+  background-color: #007bff; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 15px; /* Relleno interior */
+  border-top-left-radius: 8px; /* Radio de borde superior izquierdo */
+  border-top-right-radius: 8px; /* Radio de borde superior derecho */
+}
+
+/* Cuerpo de la tarjeta de la publicación */
+.publicacion-card-body {
+  padding: 20px; /* Relleno interior */
+  flex: 1; /* Flex grow */
+  display: flex; /* Display flex */
+  flex-direction: column; /* Dirección de columna */
+}
+
+/* Título de la tarjeta de la publicación */
+.publicacion-card-title {
+  margin-bottom: 15px; /* Margen inferior */
+  font-size: 1.25rem; /* Tamaño de fuente */
+  font-weight: bold; /* Peso de fuente */
+}
+
+/* Texto de la tarjeta de la publicación */
+.publicacion-card-text {
+  margin-bottom: 10px; /* Margen inferior */
+  font-size: 1rem; /* Tamaño de fuente */
+  color: #ccc; /* Color del texto */
+  flex: 1; /* Flex grow */
+}
+
+/* Imagen de la tarjeta de la publicación */
+.publicacion-card img {
+  max-width: 100%; /* Ancho máximo */
+  height: auto; /* Altura automática */
+  margin-bottom: 10px; /* Margen inferior */
+  border-radius: 8px; /* Radio de borde */
+  object-fit: cover; /* Ajuste de objeto */
+  max-height: 300px; /* Altura máxima */
+  width: 100%; /* Ancho completo */
+  display: block; /* Display block */
+  margin: 0 auto; /* Margen automático */
+}
+
+/* Grupo de botones */
+.btn-group {
+  display: flex; /* Display flex */
+  justify-content: space-between; /* Espacio entre elementos */
+  margin-top: 10px; /* Margen superior */
+}
+
+/* Botones en el grupo de botones */
+.btn-group .btn {
+  flex: 1; /* Flex grow */
+  margin-right: 10px; /* Margen derecho */
+}
+
+/* Último botón en el grupo de botones */
+.btn-group .btn:last-child {
+  margin-right: 0; /* Sin margen derecho */
+}
+
+/* Estilos para los comentarios */
+.comentarios-section {
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Encabezado de sección de comentarios */
+.comentarios-section h3 {
+  font-size: 1.5rem; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Margen inferior */
+}
+
+/* Comentario */
+.comentario-card {
+  background-color: #22222c; /* Color de fondo */
+  border: 1px solid #555; /* Borde */
+  border-radius: 4px; /* Radio de borde */
+  margin-bottom: 10px; /* Margen inferior */
+  padding: 10px; /* Relleno interior */
+  transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.comentario-card:hover {
+  background-color: #555; /* Color de fondo al pasar el mouse */
+}
+
+/* Texto del comentario */
+.comentario-card .card-text {
+  margin: 0; /* Sin margen */
+  font-size: 0.9rem; /* Tamaño de fuente */
+}
+
+/* Campo de entrada de comentario */
+.comentario-input {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Relleno interior */
+  font-size: 16px; /* Tamaño de fuente */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 4px; /* Radio de borde */
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  margin-top: 10px; /* Margen superior */
+}
+
+/* Estilos para el header */
+.navbar {
+  padding: 10px 20px; /* Relleno interior */
+  background-color: #22222c; /* Color de fondo */
+}
+
+/* Marca de navegación en el header */
+.navbar-brand img {
+  height: 40px; /* Altura del logo */
+}
+
+/* Enlaces de navegación en el header */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff; /* Color del texto */
+}
+
+/* Enlaces de navegación en el header al pasar el mouse */
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #007bff; /* Color del texto al pasar el mouse */
+}
+
+/* Campo de búsqueda en el header */
+.form-control {
+  width: 300px; /* Ancho del campo de búsqueda */
+  padding-left: 40px; /* Relleno interior a la izquierda */
+  background-color: #333; /* Color de fondo */
+  color: #fff; /* Color del texto */
+}
+
+/* Posición relativa para el campo de búsqueda */
+.position-relative {
+  position: relative; /* Posición relativa */
+}
+
+/* Posición absoluta para el ícono de búsqueda */
+.position-absolute {
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Centra verticalmente */
+  left: 10px; /* Posiciona a la izquierda */
+  transform: translateY(-50%); /* Centra verticalmente */
+}
+
+/* Tarjeta de formulario de publicación */
+.publicacion-form-card {
+  background-color: #333; /* Color de fondo */
+  border: 1px solid #444; /* Borde */
+  border-radius: 8px; /* Radio de borde */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+  transition: box-shadow 0.3s ease; /* Transición de sombra */
+}
+
+.publicacion-form-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra al pasar el mouse */
+}
+
+/* Encabezado de la tarjeta de formulario de publicación */
+.publicacion-form-card h2 {
+  color: #fff; /* Color del texto */
+}
+
+/* Etiquetas de formulario de publicación */
+.publicacion-form-card .form-label {
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos para el cuadro fijo a la izquierda */
+.fixed-sidebar {
+  position: fixed;
+  top: 80px; /* Ajusta según la altura de tu navbar */
+  left: 0;
+  width: 250px; /* Ajusta el ancho según tus necesidades */
+  height: calc(100vh - 80px); /* Ajusta según la altura de tu navbar */
+  overflow-y: auto; /* Para permitir scroll si el contenido es largo */
+  background-color: #181820; /* Fondo negro */
+  padding: 15px;
+  border-right: 1px solid #444; /* Borde derecho para separar del contenido principal */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos para el card dentro del sidebar */
+.fixed-sidebar .card {
+  background-color: #181820; /* Fondo negro */
+  border: 1px solid #1F1F27; /* Borde */
+  height: 100%; /* Altura completa */
+}
+
+/* Estilos para el card-body dentro del sidebar */
+.fixed-sidebar .card-body {
+  background-color: #34363b; /* Fondo negro */
+  color: #fff; /* Color del texto */
+}
+
+/* Estilos para los enlaces dentro del sidebar */
+.fixed-sidebar a {
+  color: #fff; /* Color del texto de los enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.fixed-sidebar a:hover {
+  color: #007bff; /* Color del texto de los enlaces al pasar el mouse */
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+  margin-left: 250px; /* Ajusta según el ancho del sidebar */
+  padding: 20px;
 }
